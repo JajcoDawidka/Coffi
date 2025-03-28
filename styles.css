@@ -12,6 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 .container {
@@ -19,7 +20,9 @@ body {
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  /* Zamiast marginesów między elementami */
 }
 
 .top-bar {
@@ -28,8 +31,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
     height: 60px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
 }
 
 .nav-links {
@@ -43,13 +52,6 @@ body {
     font-size: 16px;
 }
 
-.logo-container {
-    position: absolute;
-    right: 20px;
-    top: -15px;
-    z-index: 10;
-}
-
 .logo-img {
     height: 80px;
     object-fit: contain;
@@ -58,12 +60,8 @@ body {
 
 .content-wrapper {
     display: flex;
+    width: 100%;
     min-height: 400px;
-}
-
-.form-container {
-    flex: 1;
-    padding: 30px;
 }
 
 .form-container h2 {
@@ -84,8 +82,16 @@ body {
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    margin-bottom: 20px;
+    gap: 10px;
+    padding-bottom: 20px; /* Zamiast margin-bottom */
+}
+
+.form-container {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .form-group label {
@@ -103,9 +109,9 @@ body {
 
 .form-footer {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin-top: 25px;
+    align-items: center;
+    padding-top: 25px; /* Zamiast margin-top */
 }
 
 .process-btn {
@@ -129,7 +135,9 @@ body {
     width: 250px;
     background-color: #F5DEB3;
     padding: 60px 20px 30px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu-section h3 {
@@ -142,10 +150,12 @@ body {
 
 .coffee-list {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Zamiast margin-bottom */
 }
 
 .coffee-list li {
-    padding: 8px 0;
     font-size: 16px;
     color: #5a3921;
 }
